@@ -1,0 +1,3 @@
+[submodule "SamaraNavi/osmdroid-petruchcho"]
+	path = SamaraNavi/osmdroid-petruchcho
+	url = https://github.com/petruchcho/osmdroid
