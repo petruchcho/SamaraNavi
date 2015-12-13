@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/osmdroid-petruchcho/osmdroid-android/osmdroid-android.iml" filepath="$PROJECT_DIR$/osmdroid-petruchcho/osmdroid-android/osmdroid-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/osmdroid-petruchcho/osmdroid-petruchcho.iml" filepath="$PROJECT_DIR$/osmdroid-petruchcho/osmdroid-petruchcho.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samaranavi-api/samaranavi-api.iml" filepath="$PROJECT_DIR$/samaranavi-api/samaranavi-api.iml" />
     </modules>
   </component>
 </project>

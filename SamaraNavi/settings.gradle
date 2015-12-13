@@ -1,1 +1,1 @@
-include ':app', ':osmdroid-petruchcho:osmdroid-android'
+include ':app', ':osmdroid-petruchcho:osmdroid-android', ':samaranavi-api'
