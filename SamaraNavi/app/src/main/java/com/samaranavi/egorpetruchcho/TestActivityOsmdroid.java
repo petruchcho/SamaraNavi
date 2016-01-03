@@ -11,17 +11,17 @@ import android.widget.Toast;
 
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
-import com.samaranavi.egorpetruchcho.samaranavi.R;
 import com.samaranavi.egorpetruchcho.core.SamaraNaviActivity;
-import com.samaranavi.egorpetruchcho.task.wfs.GetShortestPathTask;
-import com.samaranavi.egorpetruchcho.utils.TransformationUtils;
+import com.samaranavi.egorpetruchcho.samaranavi.R;
 import com.samaranavi.egorpetruchcho.samaranavi_api.api.wfs.ShortestPathResult;
+import com.samaranavi.egorpetruchcho.task.wfs.GetShortestPathTask;
+import com.samaranavi.egorpetruchcho.utils.GeoportalTileSource;
+import com.samaranavi.egorpetruchcho.utils.TransformationUtils;
 
 import org.osmdroid.DefaultResourceProxyImpl;
 import org.osmdroid.api.IGeoPoint;
 import org.osmdroid.tileprovider.MapTileProviderBasic;
 import org.osmdroid.tileprovider.tilesource.ITileSource;
-import org.osmdroid.tileprovider.tilesource.WMSTileSource;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.Projection;
@@ -37,7 +37,6 @@ import java.util.List;
 
 public class TestActivityOsmdroid extends SamaraNaviActivity {
 
-    private static final String URL = "https://geoportal.samregion.ru/wms13?REQUEST=GetMap&LAYERS=E3,E2,E1&WIDTH=300&HEIGHT=300&FORMAT=image/png&TRANSPARENT=true&crs=EPSG:3857&srs=EPSG:3857&version=1.3.0&BBOX=";
     private MapView mapView;
     private MyLocationNewOverlay myLocationNewOverlay;
 
@@ -57,7 +56,7 @@ public class TestActivityOsmdroid extends SamaraNaviActivity {
         final MapTileProviderBasic tileProvider = new MapTileProviderBasic(getApplicationContext());
 
         // create the WMS tile source
-        final ITileSource tileSource = new WMSTileSource("WMS", 1, 20, 300, ".png", new String[]{URL});
+        final ITileSource tileSource = new GeoportalTileSource(1, 20);
         tileProvider.setTileSource(tileSource);
 
         // create a new basic map view

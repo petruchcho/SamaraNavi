@@ -4,6 +4,9 @@ import org.osmdroid.api.IGeoPoint;
 import org.osmdroid.util.GeoPoint;
 
 public class TransformationUtils {
+
+    public final static double ORIGIN_SHIFT = Math.PI * 6378137;
+
     public static IGeoPoint transformWebMercatorToWGS84(IGeoPoint srcPoint) {
         double srcPointX = srcPoint.getLatitudeE6();
         double srcPointY = srcPoint.getLongitudeE6();
@@ -26,6 +29,25 @@ public class TransformationUtils {
         double a = srcPointY * 0.017453292519943295;
 
         return new WebMercatorGeoPoint(new GeoPoint(3189068.5 * Math.log((1.0 + Math.sin(a)) / (1.0 - Math.sin(a))), x));
+    }
+
+    public static double transformXtoWebMercator(int x, int zoom) {
+        // convert x tile position and zoom to wgs84 longitude
+        double value = x / Math.pow(2.0, zoom) * 360.0 - 180;
+
+        // apply the shift to get the EPSG longitude
+        return value * ORIGIN_SHIFT / 180.0;
+    }
+
+    public static double transformYtoWebMercator(int y, int zoom) {
+        // convert x tile position and zoom to wgs84 latitude
+        double value = Math.PI - (2.0 * Math.PI * y) / Math.pow(2.0, zoom);
+        value = Math.toDegrees(Math.atan(Math.sinh(value)));
+
+        value = Math.log(Math.tan((90 + value) * Math.PI / 360.0)) / (Math.PI / 180.0);
+
+        // apply the shift to get the EPSG latitude
+        return value * ORIGIN_SHIFT / 180.0;
     }
 
     /**
