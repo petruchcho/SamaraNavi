@@ -1,4 +1,4 @@
-package com.samaranavi.egorpetruchcho.samaranavi;
+package com.samaranavi.egorpetruchcho;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -11,9 +11,10 @@ import android.widget.Toast;
 
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
-import com.samaranavi.egorpetruchcho.samaranavi.core.SamaraNaviActivity;
-import com.samaranavi.egorpetruchcho.samaranavi.task.wfs.GetShortestPathTask;
-import com.samaranavi.egorpetruchcho.samaranavi.utils.TransformationUtils;
+import com.samaranavi.egorpetruchcho.samaranavi.R;
+import com.samaranavi.egorpetruchcho.core.SamaraNaviActivity;
+import com.samaranavi.egorpetruchcho.task.wfs.GetShortestPathTask;
+import com.samaranavi.egorpetruchcho.utils.TransformationUtils;
 import com.samaranavi.egorpetruchcho.samaranavi_api.api.wfs.ShortestPathResult;
 
 import org.osmdroid.DefaultResourceProxyImpl;

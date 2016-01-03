@@ -1,4 +1,4 @@
-package com.samaranavi.egorpetruchcho.samaranavi.utils;
+package com.samaranavi.egorpetruchcho.utils;
 
 import org.osmdroid.api.IGeoPoint;
 import org.osmdroid.util.GeoPoint;

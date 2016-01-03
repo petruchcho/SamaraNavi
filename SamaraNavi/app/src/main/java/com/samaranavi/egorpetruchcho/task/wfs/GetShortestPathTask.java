@@ -1,6 +1,6 @@
-package com.samaranavi.egorpetruchcho.samaranavi.task.wfs;
+package com.samaranavi.egorpetruchcho.task.wfs;
 
-import com.samaranavi.egorpetruchcho.samaranavi.task.BackgroundTask;
+import com.samaranavi.egorpetruchcho.task.BackgroundTask;
 import com.samaranavi.egorpetruchcho.samaranavi_api.api.wfs.ShortestPathResult;
 import com.samaranavi.egorpetruchcho.samaranavi_api.api.wfs.WfsApi;
 

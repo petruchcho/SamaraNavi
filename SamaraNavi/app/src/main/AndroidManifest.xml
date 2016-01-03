@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".TestActivityOsmdroid"
+            android:name="com.samaranavi.egorpetruchcho.TestActivityOsmdroid"
             android:label="Samara Navi">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -26,7 +26,7 @@
         </activity>
 
         <service
-            android:name=".task.BackgroundSpiceService"
+            android:name="com.samaranavi.egorpetruchcho.task.BackgroundSpiceService"
             android:exported="false" />
     </application>
 

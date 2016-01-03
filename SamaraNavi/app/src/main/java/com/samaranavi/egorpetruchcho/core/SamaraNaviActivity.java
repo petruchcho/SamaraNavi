@@ -1,9 +1,9 @@
-package com.samaranavi.egorpetruchcho.samaranavi.core;
+package com.samaranavi.egorpetruchcho.core;
 
 import android.support.v7.app.AppCompatActivity;
 
 import com.octo.android.robospice.SpiceManager;
-import com.samaranavi.egorpetruchcho.samaranavi.task.BackgroundSpiceService;
+import com.samaranavi.egorpetruchcho.task.BackgroundSpiceService;
 
 public class SamaraNaviActivity extends AppCompatActivity {
 

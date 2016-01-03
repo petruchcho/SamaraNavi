@@ -1,4 +1,4 @@
-package com.samaranavi.egorpetruchcho.samaranavi.task;
+package com.samaranavi.egorpetruchcho.task;
 
 import com.octo.android.robospice.request.SpiceRequest;
 
