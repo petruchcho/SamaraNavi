@@ -1,24 +1,25 @@
 package com.samaranavi.egorpetruchcho.core;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.support.v4.app.Fragment;
 
 import com.octo.android.robospice.SpiceManager;
 import com.samaranavi.egorpetruchcho.task.BackgroundSpiceService;
 
-public abstract class SamaraNaviActivity extends AppCompatActivity {
+public abstract class SamaraNaviFragment extends Fragment {
 
     private final SpiceManager backgroundManager = new SpiceManager(BackgroundSpiceService.class);
 
     @Override
-    protected void onStart() {
-        backgroundManager.start(this);
-        super.onStart();
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        backgroundManager.start(getActivity());
     }
 
     @Override
-    protected void onStop() {
+    public void onDetach() {
         backgroundManager.shouldStop();
-        super.onStop();
+        super.onDetach();
     }
 
     protected SpiceManager getBackgroundManager() {

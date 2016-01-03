@@ -1,5 +1,6 @@
-<manifest package="com.samaranavi.egorpetruchcho.samaranavi"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="com.samaranavi.egorpetruchcho.samaranavi"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -19,6 +20,12 @@
         <activity
             android:name="com.samaranavi.egorpetruchcho.TestActivityOsmdroid"
             android:label="Samara Navi">
+        </activity>
+
+        <activity
+            android:name="com.samaranavi.egorpetruchcho.ui.MapActivity"
+            android:label="Samara Navi">
+
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <action android:name="android.intent.action.MAIN"/>
@@ -27,7 +34,7 @@
 
         <service
             android:name="com.samaranavi.egorpetruchcho.task.BackgroundSpiceService"
-            android:exported="false" />
+            android:exported="false"/>
     </application>
 
 </manifest>
