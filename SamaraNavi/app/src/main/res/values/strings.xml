@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SamaraNavi</string>
+
+    <!-- Map Activity -->
+    <string name="drawer_open_description">Open Drawer</string>
+    <string name="drawer_close_description">Close Drawer</string>
 </resources>

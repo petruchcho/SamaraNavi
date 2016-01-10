@@ -24,7 +24,9 @@
 
         <activity
             android:name="com.samaranavi.egorpetruchcho.ui.MapActivity"
-            android:label="Samara Navi">
+            android:hardwareAccelerated="true"
+            android:label="Samara Navi"
+            android:theme="@style/MapTheme">
 
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>

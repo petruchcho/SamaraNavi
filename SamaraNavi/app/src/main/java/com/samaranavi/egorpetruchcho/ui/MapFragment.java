@@ -15,6 +15,7 @@ import org.osmdroid.tileprovider.MapTileProviderBasic;
 import org.osmdroid.tileprovider.tilesource.ITileSource;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.ScaleBarOverlay;
 
 public class MapFragment extends SamaraNaviFragment {
 
