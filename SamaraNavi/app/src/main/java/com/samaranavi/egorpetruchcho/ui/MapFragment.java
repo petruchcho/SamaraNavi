@@ -40,6 +40,7 @@ public class MapFragment extends SamaraNaviFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        configureNavigationButton(view, savedInstanceState);
         configureMapView(view, savedInstanceState);
     }
 
@@ -67,6 +68,14 @@ public class MapFragment extends SamaraNaviFragment {
 
         mapView.setBuiltInZoomControls(true);
         mapView.setMultiTouchControls(true);
+    }
+
+    private void configureNavigationButton(View view, Bundle savedInstanceState) {
+        view.findViewById(R.id.navigation_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
     }
 
     @Override
