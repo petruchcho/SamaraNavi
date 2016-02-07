@@ -1,5 +1,6 @@
 package com.samaranavi.egorpetruchcho.ui;
 
+import android.annotation.TargetApi;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
@@ -46,10 +47,14 @@ public class MapActivity extends SamaraNaviActivity {
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     private void configureNavigationDrawer() {
         if (toolbar == null || drawerLayout == null || navigationView == null) {
             throw new IllegalStateException("One of component of navigation drawer_menu is null, check xml file, please");
         }
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         if (Build.VERSION.SDK_INT >= 21) {
             // Set paddingTop of toolbar to height of status bar.

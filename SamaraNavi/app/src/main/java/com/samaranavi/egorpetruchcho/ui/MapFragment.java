@@ -67,7 +67,6 @@ public class MapFragment extends SamaraNaviFragment {
             mapView.getController().setZoom(mapZoomLevel);
         }
 
-        mapView.setBuiltInZoomControls(true);
         mapView.setMultiTouchControls(true);
     }
 
