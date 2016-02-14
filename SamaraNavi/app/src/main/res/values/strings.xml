@@ -4,4 +4,6 @@
     <!-- Map Activity -->
     <string name="drawer_open_description">Open Drawer</string>
     <string name="drawer_close_description">Close Drawer</string>
+    <string name="pick_places_to_find_path_snackbar">Выберите две точки на карте для поиска пути</string>
+    <string name="close">Закрыть</string>
 </resources>
