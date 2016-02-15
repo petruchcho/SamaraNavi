@@ -18,15 +18,20 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.samaranavi.egorpetruchcho.TestActivityOsmdroid"
-            android:label="Samara Navi">
+            android:name="com.samaranavi.egorpetruchcho.ui.MapActivity"
+            android:hardwareAccelerated="true"
+            android:label="Samara Navi New"
+            android:theme="@style/MapTheme">
+
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
         </activity>
 
         <activity
-            android:name="com.samaranavi.egorpetruchcho.ui.MapActivity"
-            android:hardwareAccelerated="true"
-            android:label="Samara Navi"
-            android:theme="@style/MapTheme">
+            android:name="com.samaranavi.egorpetruchcho.TestActivityOsmdroid"
+            android:label="Samara Navi Old">
 
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
