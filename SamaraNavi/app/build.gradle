@@ -30,7 +30,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
-    compile project(':osmdroid-petruchcho:osmdroid-android')
     compile 'com.octo.android.robospice:robospice:1.4.14'
+    compile 'com.github.MKergall.osmbonuspack:OSMBonusPack:v5.7'
     compile project(':samaranavi-api')
 }
