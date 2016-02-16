@@ -2,6 +2,7 @@
 <FrameLayout
     android:id="@+id/map_container"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,17 +12,35 @@
         android:layout_height="match_parent">
     </org.osmdroid.views.MapView>
 
-    <FrameLayout
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/navigation_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="24dp"
-            android:src="@drawable/icon_enable_location"/>
-    </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/find_path_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="96dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/icon_enable_location"
+                app:backgroundTint="@color/colorPrimary"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/navigation_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="24dp"
+                android:src="@drawable/icon_enable_location"/>
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
 </FrameLayout>
