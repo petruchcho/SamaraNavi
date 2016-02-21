@@ -76,16 +76,6 @@ public class FindPathController implements MapEventsReceiverUIController {
 
     private void showSnackBar() {
         snackbar = Snackbar.make(buttonContainer, R.string.pick_places_to_find_path_snackbar, Snackbar.LENGTH_INDEFINITE);
-        snackbar.getView().addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
-            @Override
-            public void onViewAttachedToWindow(View v) {
-            }
-
-            @Override
-            public void onViewDetachedFromWindow(View v) {
-                findPathButton.setTranslationY(0);
-            }
-        });
         snackbar.setAction(R.string.close, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
