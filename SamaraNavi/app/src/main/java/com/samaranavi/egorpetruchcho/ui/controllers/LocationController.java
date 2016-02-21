@@ -80,8 +80,8 @@ public class LocationController implements UIController {
     }
 
     private enum LocationState {
-        DISABLED(R.drawable.icon_enable_location),
-        SHOW_MY_LOCATION(R.drawable.icon_my_location),
+        DISABLED(R.drawable.icon_location_disabled),
+        SHOW_MY_LOCATION(R.drawable.icon_location_enabled),
         FOLLOW_ME(R.drawable.icon_navigation);
 
         final

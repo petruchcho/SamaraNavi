@@ -49,7 +49,7 @@ public class MapFragment extends SamaraNaviFragment implements MapEventsReceiver
 
         mapViewController = new MapViewController(getActivity(), mapView);
         locationController = new LocationController(getActivity(), mapView, (FloatingActionButton) view.findViewById(R.id.navigation_button));
-        findPathController = new FindPathController(getActivity(), mapView, view.findViewById(R.id.coordinator_view), (FloatingActionButton) view.findViewById(R.id.find_path_button));
+        findPathController = new FindPathController(getActivity(), getBackgroundManager(), mapView, view.findViewById(R.id.coordinator_view), (FloatingActionButton) view.findViewById(R.id.find_path_button));
 
         restoreState(savedInstanceState);
     }
