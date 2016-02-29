@@ -5,7 +5,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.octo.android.robospice.SpiceManager;
@@ -97,6 +99,10 @@ public class FindPathController implements MapEventsReceiverUIController {
 
     private void showSnackBar() {
         snackbar = Snackbar.make(buttonContainer, R.string.pick_places_to_find_path_snackbar, Snackbar.LENGTH_INDEFINITE);
+        TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+        if (tv != null) {
+            tv.setMaxLines(3);
+        }
         snackbar.setAction(R.string.close, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,7 +115,7 @@ public class FindPathController implements MapEventsReceiverUIController {
 
     private void handleMode() {
         if (modeTurnedOn) {
-            findPathButton.setImageResource(R.drawable.icon_root_with_points);
+            findPathButton.setImageResource(R.drawable.icon_search);
             showSnackBar();
             showMarkers();
         } else {
